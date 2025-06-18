@@ -1,16 +1,18 @@
 <div align="center">
   <h1> Tenere </h1>
-  <img src="assets/logo.png" alt="A crab in the moroccan desert"></img>
   <h2> TUI interface for LLMs written in Rust </h2>
 </div>
 
-## 📸 Demo
+## About this Fork
+I really like the simplicity of this app but I simply hate emoji in my terminal. Therefore this fork seeks to add some customizability to fix things I dislike.
+
+## Demo
 
 ![Demo](https://github.com/pythops/tenere/assets/57548585/b33ed59b-1d94-4bc5-8e61-73e63f41137e)
 
 <br>
 
-## 🪄 Features
+## Features
 
 - Syntax highlights
 - Chat history
@@ -22,7 +24,7 @@
 
 <br>
 
-## 💎 Supported Backends
+## Supported Backends
 
 - [x] ChatGPT
 - [x] llama.cpp
@@ -30,7 +32,7 @@
 
 <br>
 
-## 🚀 Installation
+## Installation
 
 <a href="https://repology.org/project/tenere/versions">
     <img src="https://repology.org/badge/vertical-allrepos/tenere.svg" alt="Packaging status" align="left">
@@ -42,11 +44,11 @@
 <br>
 <br>
 
-### 📥 Binary releases
+### Binary releases
 
 You can download the pre-built binaries from the [release page](https://github.com/pythops/tenere/releases)
 
-### 📦 crates.io
+### crates.io
 
 `tenere` can be installed from [crates.io](https://crates.io/crates/tenere)
 
@@ -54,7 +56,7 @@ You can download the pre-built binaries from the [release page](https://github.c
 cargo install tenere
 ```
 
-### ❄️ NixOS / Nix
+### NixOS / Nix
 
 Tenere is available in nixpkgs and can be installed via configuration.nix:
 
@@ -68,7 +70,7 @@ For non-NixOS systems, install directly with:
 nix-env -iA nixpkgs.tenere
 ```
 
-### 📱 Mobile (nix-on-droid)
+### Mobile (nix-on-droid)
 
 Tenere works on Android via nix-on-droid ([demo](https://github.com/user-attachments/assets/c06e5650-0b5d-4f0a-816d-a2c1bd88774a)).
 
@@ -79,13 +81,13 @@ To set up ([tutorial](https://www.youtube.com/watch?v=XiVz2UR9epE)):
 3. Run ``nix-on-droid switch``
 4. Create your config at ".config/tenere/config.toml"
 
-### 🍺 Homebrew
+### Homebrew
 
 ```
 brew install tenere
 ```
 
-### ⚒️ Build from source
+### Build from source
 
 To build from the source, you need [Rust](https://www.rust-lang.org/) compiler and
 [Cargo package manager](https://doc.rust-lang.org/cargo/).
@@ -100,7 +102,7 @@ This will produce an executable file at `target/release/tenere` that you can cop
 
 <br>
 
-## ⚙️ Configuration
+## Configuration
 
 Tenere can be configured using a TOML configuration file. By default, the configuration file is located at:
 
@@ -148,7 +150,7 @@ show_history = 'h'
 new_chat = 'n'
 ```
 
-ℹ️ Note
+Note
 
 > To avoid overlapping with vim key bindings, you need to use `ctrl` + `key` except for help `?`.
 
@@ -336,6 +338,6 @@ There are 3 modes like vim: `Normal`, `Visual` and `Insert`.
 
 <br>
 
-## ⚖️ License
+## License
 
 GNU General Public License v3.0 or later
