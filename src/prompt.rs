@@ -278,9 +278,9 @@ impl Prompt<'_> {
                 })
                 .border_type({
                     if *focused_block == FocusedBlock::Prompt {
-                        BorderType::Thick
+                        BorderType::QuadrantInside
                     } else {
-                        BorderType::Rounded
+                        BorderType::Plain   
                     }
                 }),
             block,

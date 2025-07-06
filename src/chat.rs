@@ -55,7 +55,7 @@ impl Chat<'_> {
                 self.answer.plain_answer.push_str(answer.as_str());
 
                 self.answer.formatted_answer =
-                    formatter.format(format!("🤖: {}", &self.answer.plain_answer).as_str());
+                    formatter.format(format!("LLM: {}", &self.answer.plain_answer).as_str());
             }
 
             LLMAnswer::EndAnswer => {
@@ -65,7 +65,7 @@ impl Chat<'_> {
                 self.formatted_chat.extend(Text::raw("\n"));
 
                 self.plain_chat
-                    .push(format!("🤖: {}", self.answer.plain_answer));
+                    .push(format!("LLM: {}", self.answer.plain_answer));
 
                 self.answer = Answer::default();
             }

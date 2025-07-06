@@ -16,6 +16,9 @@ use tokio::sync::Mutex;
 
 use tokio::sync::mpsc::UnboundedSender;
 
+use ratatui::style::Style;
+use ratatui::style::Color;
+
 pub async fn handle_key_events(
     key_event: KeyEvent,
     app: &mut App<'_>,
@@ -194,18 +197,22 @@ pub async fn handle_key_events(
 
                 app.prompt.clear();
 
-                app.chat.plain_chat.push(format!("👤 : {}\n", user_input));
+                let style = Style::new().fg(Color::Blue);
+                app.chat.formatted_chat.lines.push(Line::styled("*    *    *    *    *", style));
+                app.chat.plain_chat.push(format!("You: {}\n", user_input));
 
                 if app.chat.formatted_chat.width() == 0 {
                     app.chat.formatted_chat = app
                         .formatter
-                        .format(format!("👤: {}\n", user_input).as_str());
+                        .format(format!("You: {}\n", user_input).as_str());
                 } else {
                     app.chat.formatted_chat.extend(
                         app.formatter
-                            .format(format!("👤: {}\n", user_input).as_str()),
+                            .format(format!("You: {}\n", user_input).as_str()),
                     );
                 }
+
+                app.chat.formatted_chat.lines.push(Line::styled("*    *    *    *    *", style));
 
                 let llm = llm.clone();
                 {
@@ -218,7 +225,7 @@ pub async fn handle_key_events(
                 app.chat
                     .formatted_chat
                     .lines
-                    .push(Line::raw("🤖: ".to_string()));
+                    .push(Line::raw("LLM: ".to_string()));
 
                 let terminate_response_signal = app.terminate_response_signal.clone();
 

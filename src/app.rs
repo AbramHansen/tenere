@@ -68,7 +68,7 @@ impl<'a> App<'a> {
             self.chat
                 .formatted_chat
                 .lines
-                .push(Line::raw(format!("🤖: Waiting {}", self.spinner.draw())));
+                .push(Line::raw(format!("LLM Loading [{}]", self.spinner.draw())));
             self.spinner.update();
         }
     }

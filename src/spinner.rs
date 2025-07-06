@@ -1,4 +1,4 @@
-static SPINNER_CHARS: &[char] = &['⣷', '⣯', '⣟', '⡿', '⢿', '⣻', '⣽', '⣾'];
+static SPINNER_CHARS: &[char] = &['-', '\\', '|', '/'];
 
 #[derive(Default, Debug)]
 pub struct Spinner {

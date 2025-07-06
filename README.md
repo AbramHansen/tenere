@@ -4,7 +4,7 @@
 </div>
 
 ## About this Fork
-I really like the simplicity of this app but I simply hate emoji in my terminal. Therefore this fork seeks to add some customizability to fix things I dislike.
+I really like the simplicity of this app but I simply hate emoji in my terminal. Therefore this fork seeks to add some personal customizations to fix things I dislike.
 
 ## Demo
 
